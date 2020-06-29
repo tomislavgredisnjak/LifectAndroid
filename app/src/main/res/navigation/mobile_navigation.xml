@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.lifeect.ui.home.view.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.lifeect.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_training"
+        android:name="com.example.lifeect.ui.trainings.view.TrainingsFragment"
+        android:label="@string/menu_training"
+        tools:layout="@layout/fragment_trainings" />
+
+    <fragment
+        android:id="@+id/nav_muscle"
+        android:name="com.example.lifeect.ui.muscle.view.MuscleFragment"
+        android:label="@string/menu_muscle"
+        tools:layout="@layout/fragment_muscle" />
+    <fragment
+        android:id="@+id/nav_exercise"
+        android:name="com.example.lifeect.ui.exercises.view.ExercisesFragment"
+        android:label="@string/menu_exercise"
+        tools:layout="@layout/fragment_exercises" />
+</navigation>

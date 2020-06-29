@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/exerciseImage"
+        android:layout_width="match_parent"
+        android:layout_height="234dp"
+        android:paddingTop="10sp"
+        android:orientation="vertical"
+        fresco:actualImageScaleType="fitCenter"
+        tools:ignore="MissingConstraints"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/exerciseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:gravity="center_horizontal">
+    </TextView>
+    <TextView
+        android:id="@+id/exerciseMuscleId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Paragraph">
+    </TextView>
+    <TextView
+        android:id="@+id/exerciseReps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Paragraph">
+    </TextView>
+    <TextView
+        android:id="@+id/exerciseSets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Paragraph">
+    </TextView>
+
+</LinearLayout>
